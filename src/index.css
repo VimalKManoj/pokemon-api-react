@@ -1,13 +1,286 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+  body {
+  margin: 0;
+  background:url(../public/O4YIHQ0.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 20px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.title-input-wrapper{
+
+  width: 99vw;
+  height: 120px;
+display: flex;
+flex-direction: row ;
+justify-content: end;
+background-color: transparent;
+z-index: 900;
+border-bottom-right-radius: 0px ;
+align-items: center;
+position: sticky;
+background:url(../public/nav.jpg);
+background-size: cover;
+    top: 0;
+   
+    margin-bottom: 20px;
+    border-bottom: 9px solid black;
+
+}
+
+
+.main-logo{
+  position: absolute;
+  height: 180px;
+  top: -28px;
+  left:570px;
+}
+
+.char{
+  height: 150px;
+  position: absolute;
+  top: -5px;
+  left:130px;
+}
+
+.search-input{
+  height: 40px;
+  width: 380px;
+  border:4px solid white;
+  border-radius: 30px;
+  box-shadow: inset 2px 2px 15px silver;
+  padding-left: 10px;
+  
+  transition: border .1s ease-in;
+}
+
+.search-input:hover{
+  border:5px solid black;
+}
+
+
+
+.search-button{
+  height: 42px;
+  margin-left: 20px;
+  width: 80px;
+  border:4px solid white;
+  color: white;
+  background-color: black;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.main-wrapper{
+  margin: 0px 20px;
+  position: relative;
+  
+}
+
+.pokemon-wrapper{
+  /* background:linear-gradient(60deg,rgba(233,233,233,.5), rgba(246,246,246,.7)); */
+  background: url(../public/yellowback.jpg);
+  background-size: 100%;
+  /* background-size: cover; */
+  width: 44vw;
+  /* border-radius: 20px; */
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 5px 30px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex: 3;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  border: 9px solid black;
+}
+
+.pokeball1{
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  opacity: .2;
+  top: -50px;
+  right: -70px;
+  z-index: 1;
+}
+
+.card{
+  width: 180px;
+  background-color:rgba(229, 230, 228,0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:200px;
+  border-radius: 20px;
+  border: 5px solid #065A9C;
+  z-index: 5;
+  transition: width .3s ease-in-out, height .3s ease-in-out, background .3s ease-in-out;
+  
+  
+}
+.card:hover{
+  width: 190px;
+  height: 210px;
+  border: 6px solid black;
+  background: radial-gradient(circle, rgba(251,214,2,1) 0%, rgb(233, 137, 58) 100%);
+  box-shadow:  2px 5px 30px 5px rgba(0, 0, 0, 0.4);
+}
+
+.pokemon-image{
+  width:140px;
+  height:140px;
+}
+
+.pokemon-name{
+  font-family: 'Press Start 2P', cursive;
+}
+
+.btn-load{
+  display: block;
+  width: 180px;
+  height: 60px;
+  background-color: #8BC6EC;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  /* font-size: 20px; */
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;  
+
+}
+
+.btn-load:hover{
+  display: block;
+  width: 180px;
+  height: 60px;
+  background-color: #8BC6EC;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  /* font-size: 20px; */
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  border: none;
+  border-radius: 30px;
+  border: 5px solid #065A9C;
+
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100px;
+  width: 600px;
+}
+
+
+.details-wrapper{
+  width: 51vw;
+  height: 78vh;
+  position: fixed;
+  overflow: hidden;
+  top: 140px;
+  right: 20px;
+ background: url(../public/green.jpg);
+ border: 9px solid black;
+ background-size: cover;
+}
+
+.no-item-selected{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.description{
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(255, 251, 16);
+  text-shadow: 4px 4px blue;
+  font-size: 70px;
+  left: 80px;
+  position: absolute;
+  top: 180px;
+
+
+}
+
+.item-selected{
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+
+
+.name{
+  font-size: 74px;
+  position: absolute;
+  bottom: 5px;
+  /* padding-left: 20px; */
+  -webkit-text-stroke: 4px black;
+    -webkit-text-fill-color: white;
+  z-index: 999;
+  
+  font-family: 'Press Start 2P', cursive;
+}
+}
+
+.detail-image{
+  position: absolute;
+  bottom:0px;
+  /* left:200px; */
+  right: -0px;
+
+  height: 500px;
+  -webkit-filter: drop-shadow(10px 10px 10px #666666);
+  filter: drop-shadow(10px 10px 15px #000000);
+}
+
+.ability{
+  color: white;
+  filter: drop-shadow(10px 10px 15px #000000);  padding-top: 20px;
+  padding-bottom: 8px;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  
+ 
+
+}
+
+.ability-span{
+  padding: 20px ;
+  margin-top: 10px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background: white;
+}
+
+.types{
+  /* padding-left: 20px; */
 }
